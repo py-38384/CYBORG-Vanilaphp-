@@ -1,11 +1,9 @@
 <?php
-
-    $urlpattern = [
-        "/" => ['base_controller','home'],
-        "/browse" => ['base_controller','browse'],
-        "/details" => ['base_controller','details'],
-        "/streams" => ['base_controller','streams'],
-        "/profile" => ['base_controller','profile'],
-    ];
-
-    route($urlpattern);
+    use System\Route;
+    use Controllers\BaseController;
+    
+    Route::get("/",[BaseController::class,'home']);
+    Route::get("/browse",[BaseController::class,'home']);
+    Route::get("/details",[BaseController::class,'details']);
+    Route::get("/streams",[BaseController::class,'streams']);
+    Route::get("/profile",[BaseController::class,'profile']);

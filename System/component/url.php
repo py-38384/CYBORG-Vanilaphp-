@@ -9,6 +9,9 @@
     function get_uri(){
         return parse_url($_SERVER['REQUEST_URI'])["path"];
     }
+    function get_request_method(){
+        return strtolower($_SERVER['REQUEST_METHOD']);
+    }
     function url($path = ""){
         $host = get_host(); 
         $requestUri = get_uri();

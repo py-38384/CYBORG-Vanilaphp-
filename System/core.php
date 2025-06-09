@@ -1,8 +1,8 @@
 <?php
-
+    
     define('BASE_PATH', dirname(__DIR__));
     define('ENV_PATH', BASE_PATH.'/.env');
-    require_once BASE_PATH."/system/component/url.php";
+    require_once BASE_PATH."/System/component/url.php";
     function loadEnv($path)
     {
         if (!file_exists($path)) {
